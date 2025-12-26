@@ -89,7 +89,7 @@
                         I designed an automated integration that monitors the power supply; upon detecting a failure, 
                         it triggers the gate's battery backup to open the entrance automatically. 
                         Once utility power is restored, the system re-engages to close the gate, ensuring both emergency accessibility and long-term security.
-                        <br><strong>The Solution</strong>The solution utilizes a Raspberry Pi integrated with a relay module to interface directly 
+                        <br><strong>The Solution</strong> Utilizes a Raspberry Pi integrated with a relay module to interface directly 
                         with the gate’s control board. A custom Python script continuously monitors internet connectivity as a proxy for grid stability. 
                         Upon detecting a loss of connectivity, the script triggers the Raspberry Pi’s internal GPIO pins to switch the relay, effectively bypassing 
                         the telephone entry system to open the gate. Once the internet connection is restored, 
