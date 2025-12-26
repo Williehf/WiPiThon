@@ -13,6 +13,16 @@ h1 {
     color: #3c48ee;
 }
 
+
+.banner {
+    /*background-color: #333;*/
+    color: #469eb9;
+    font-size: 1.1rem;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(172, 21, 127, 0.1);
+}
+
 iframe{
 
 /*.video-container {*/
