@@ -5,13 +5,19 @@
     padding: 0;           /* Removes default inner spacing (padding) */
 }
 
+body{
+     background-color: #F9F9F9; /* Very light gray background */
+  color: #424242;   
+}
+
 h1 {
     text-align: center;
     font-size: 2rem;
     /*font-family: monospace;*/
     font-style: italic;
-    color: #3c48ee;
+    /*color: #3c48ee;*/
     font-family: sans-serif;
+    color: #757575
 }
 
 
