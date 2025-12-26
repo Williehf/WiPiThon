@@ -12,6 +12,10 @@ h1 {
     font-style: italic;
     color: #3c48ee;
 }
+
+frame{
+    align-items: center;
+}
 .specs-container {
     max-width: 900px;
     margin: 5px auto; /* Centers the content on desktop */
@@ -235,7 +239,7 @@ h1 {
 footer {
     background-color: #333;
     color: #fff;
-    text-align: left;
+    text-align: center;
     padding: 15px 0;
     margin-top: auto;
 }
