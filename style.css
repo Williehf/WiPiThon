@@ -32,7 +32,7 @@ iframe{
   align-items: center;     /* Centers vertically (if the container has height) */
   width: 100%;
   aspect-ratio: 16 / 9;
-
+  border-radius: 20px;
 }
 
 .specs-container {
