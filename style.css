@@ -14,8 +14,14 @@ h1 {
 }
 
 iframe{
-    align-items: center;
+
+/*.video-container {*/
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically (if the container has height) */
+  width: 100%;
 }
+
 .specs-container {
     max-width: 900px;
     margin: 5px auto; /* Centers the content on desktop */
