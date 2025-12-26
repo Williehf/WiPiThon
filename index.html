@@ -77,6 +77,36 @@
     <img src="testing.png" class="zoom-img" draggable="false">
 </div></div>
         </section>
+    <section id="material-specs">
+
+            <div class="material-list-wrapper">
+                <h3>IoT Project:</h3>
+                <ul>
+                    <li>
+                        <strong>Raspberry Pi Security Access Control</strong> Following the persistent power grid instability after 
+                        Hurricane Maria, this project addresses a critical accessibility gap in telephone-based entry systems. 
+                        During outages, the loss of internet and primary power often leaves residents stranded. 
+                        I designed an automated integration that monitors the power supply; upon detecting a failure, 
+                        it triggers the gate's battery backup to open the entrance automatically. 
+                        Once utility power is restored, the system re-engages to close the gate, ensuring both emergency accessibility and long-term security.
+                        <br><strong>The Solution</strong>The solution utilizes a Raspberry Pi integrated with a relay module to interface directly 
+                        with the gate’s control board. A custom Python script continuously monitors internet connectivity as a proxy for grid stability. 
+                        Upon detecting a loss of connectivity, the script triggers the Raspberry Pi’s internal GPIO pins to switch the relay, effectively bypassing 
+                        the telephone entry system to open the gate. Once the internet connection is restored, 
+                        the system automatically cycles the relay again to secure the entrance.
+                    </li>
+                    <li>
+                        <strong>MQTT: Door and Window Notification:</strong> 
+                        <br><strong>Materials:</strong> ESP-01, Capacitor 100uf, Capacitor Ceramic, Voltage regulator 3.3v, Reed switch, Battery 18650, Case – 3D print
+
+                        <br><strong>Temperature and Humidity monitoring:</strong> 
+                        <br><strong>Materials:</strong> ESP-01, Capacitor 100uf, Capacitor Ceramic, Voltage regulator 3.3v, BEM280, Display ssd13006, Battery 18650, Case – 3D print
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
     <script src="scroll.js"> 
@@ -89,3 +119,4 @@
     </footer>
 </body>
 </html>
+
