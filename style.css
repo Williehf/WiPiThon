@@ -116,7 +116,7 @@ iframe{
 }
 
 .responsive-imagex1 {
-    width: 75%;
+    width: 100%;
     height: auto;
     display: block;
     transition: transform 0.5s ease;
