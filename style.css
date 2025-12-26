@@ -1,0 +1,247 @@
+/* A Modern CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width/height */
+    margin: 0;            /* Removes default outer spacing (margins) */
+    padding: 0;           /* Removes default inner spacing (padding) */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: monospace;
+    font-style: italic;
+    color: #3c48ee;
+}
+.specs-container {
+    max-width: 900px;
+    margin: 5px auto; /* Centers the content on desktop */
+    padding: 0 0px;   /* Adds spacing on iPhones */
+    font-family: sans-serif;
+    color: #333;
+}
+
+.specs-container h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #222;
+    font-size: 2rem;
+}
+
+.specs-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Bullet list styling */
+.material-list-wrapper h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    border-left: 4px solid #70bfdf; /* Matches your previous design color */
+    padding-left: 10px;
+}
+
+.material-list-wrapper ul {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+}
+
+.material-list-wrapper li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+.material-list-wrapper li strong {
+    color: #000;
+}
+
+/* Container Layout */
+.two-column-container {
+    display: flex;
+    align-items: center; /* Vertically centers text with image */
+    justify-content: center;
+    gap: 50px;           /* More breathing room between image and text */
+    max-width: 900px;
+    margin: 30px auto;   /* Space above/below the section */
+    padding: 0 20px;
+}
+
+/* Image Styling */
+.image-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px; /* Modern rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Soft depth */
+}
+.image-wrapperx {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px; /* Modern rounded corners */
+    box-shadow: 0 auto auto rgba(45, 3, 112, 0.1); /* Soft depth */
+ display: grid;
+  place-items: center;
+}
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    
+    
+}
+
+.responsive-imagex1 {
+    width: 75%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    
+}
+
+.image-wrapper:hover .responsive-image {
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Text Content Styling */
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.column h3 {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.column p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 25px;
+    text-align: left; /* Justify often creates awkward gaps; left is cleaner */
+}
+
+/* Button Styling */
+.nav-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+/* Responsive: Stack columns on mobile */
+@media (max-width: 768px) {
+    .two-column-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .column {
+        align-items: center;
+    }
+}
+
+
+/*image show*/
+/*image scroll*/
+.scroll-wrapper {
+  width: 100%;
+  /* Change to 'auto' for iPhone, but hide scrollbar with CSS */
+  overflow-x: auto; 
+  overflow-y: hidden;
+  padding: 30px 0; 
+  cursor: crosshair;
+  max-width: 900px;
+  margin: 0 auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -webkit-overflow-scrolling: touch; /* Essential for iPhone smooth scrolling */
+}
+
+/* Hide scrollbar for Chrome/Safari (iPhone) */
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding: 0 50px;
+  /* On mobile, we use native scroll, on desktop we use JS transform */
+  transition: transform 0.1s ease-out; 
+}
+
+.zoom-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+  /* CUTS 25% OFF THE BOTTOM */
+  /*clip-path: inset(0 0 25% 0);
+  /* Prevents iOS from trying to "pick up" the image while swiping */
+  -webkit-user-drag: none;
+}
+
+.zoom-img:hover {
+  transform: scale(1.5);
+  z-index: 999;
+  box-shadow: 0 20px 40px rgba(207, 243, 5, 0.6);
+}
+
+@media (max-width: 768px) {
+  .scroll-content {
+    /* Disable JS transform on mobile to allow native finger swiping */
+    transform: none !important; 
+    padding: 0 20px;
+  }
+  .zoom-img {
+    width: 150px; /* Larger for touch targets */
+    height: 150px;
+    
+    /*width: 150px;           /* Fixed width */
+    /*height: 150px;          /* Fixed height to keep it square */
+    /*object-fit: cover;      /* This prevents the image from looking "stretched" */
+    /*border-radius: 10px;    /* Optional: adds nice rounded corners */
+    /*display: block;         /* Centers the image */
+    /*margin: 0 auto 10px; */
+  
+}}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+.footer-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
