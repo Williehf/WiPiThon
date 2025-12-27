@@ -44,7 +44,7 @@ iframe{
 .specs-container {
     max-width: 900px;
     margin: 5px auto; /* Centers the content on desktop */
-    padding: 0 10px;   /* Adds spacing on iPhones */
+    padding: 0 0px;   /* Adds spacing on iPhones */
     font-family: sans-serif;
     color: #333;
 }
@@ -60,6 +60,7 @@ iframe{
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 
 /* Bullet list styling */
